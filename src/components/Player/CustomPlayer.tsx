@@ -21,7 +21,7 @@ const formatTime = (seconds: number) => {
   return `${m}:${s.toString().padStart(2, '0')}`
 }
 
-export const CustomPlayer: React.FC<CustomPlayerProps> = ({ video, playerState = 'FULL', onToggleMiniPlayer, onExpand, onClose, nextVideo, onPlayNext }) => {
+export const CustomPlayer: React.FC<CustomPlayerProps> = ({ video, playerState = 'FULL', onExpand, onClose, nextVideo, onPlayNext }) => {
   const playerRef = useRef<any>(null)
   
   const [playing, setPlaying] = useState(true)
